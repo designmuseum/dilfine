@@ -348,7 +348,7 @@ function sameship() {
         $('#billing_email').val(data.email);
         $('#billing_mobile').val(data.phone);
         $('#billing_pincode').val(data.pin_code);
-        $('#billing_address').val(data.address);
+        $('#billing_address').html(data.address);
 
         $('.preL').fadeOut('fast');
         $('.loaderT').fadeOut('fast');

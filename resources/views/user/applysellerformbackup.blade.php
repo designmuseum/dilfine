@@ -59,11 +59,11 @@
           @if(empty($sellerac) && Auth::user()->role_id != "a")
 
           <a class="nav-link padding15 {{ Nav::isRoute('applyforseller') }}" href="{{ route('applyforseller') }}"><i
-              class="fa fa-address-card-o" aria-hidden="true"></i> {{ __('staticwords.ApplyforSellerAccount') }}</a>
+              class="fa fa-address-card" aria-hidden="true"></i> {{ __('staticwords.ApplyforSellerAccount') }}</a>
 
           @elseif(Auth::user()->role_id != "a")
           <a class="nav-link padding15 {{ Nav::isRoute('seller.dboard') }}" href="{{ route('seller.dboard') }}"><i
-              class="fa fa-address-card-o" aria-hidden="true"></i> {{ __('staticwords.SellerDashboard') }}</a>
+              class="fa fa-address-card" aria-hidden="true"></i> {{ __('staticwords.SellerDashboard') }}</a>
 
           @endif
           @endif
@@ -177,7 +177,7 @@
                       <div class="form-group">
                         <label class="font-weight-bold">{{ __('staticwords.Country') }} <small
                             class="required">*</small></label>
-                        <select name="country_id" class="form-control" id="country_id">
+                        <select required name="country_id" class="form-control" id="country_id">
                           <option value="0">{{ __('staticwords.PleaseChooseCountry') }}</option> @foreach($country as
                           $c)
                           <?php
@@ -192,21 +192,21 @@
                       <div class="form-group">
                         <label class="font-weight-bold">{{ __('staticwords.State') }} <small
                             class="required"></small></label>
-                        <select name="state_id" class="form-control" id="upload_id">
+                        <select required name="state_id" class="form-control" id="upload_id">
                           <option value="0">{{ __('staticwords.PleaseChooseState') }}</option>
                         </select>
                       </div>
                       <div class="form-group">
                         <label class="font-weight-bold">{{ __('staticwords.City') }} <small
                             class="required">*</small></label>
-                        <select name="city_id" id="city_id" class="form-control">
+                        <select required name="city_id" id="city_id" class="form-control">
                           <option value="0">{{ __('staticwords.PleaseChooseCity') }}</option>
                         </select>
                       </div>
                       <div class="form-group">
                         <label class="font-weight-bold">{{ __('staticwords.Pincode') }}
                           ({{ __('staticwords.optional') }}) </label>
-                        <input pattern="[0-9]+" title="Invalid pincode" type="text" id="first-name"
+                        <input required pattern="[0-9]+" title="Invalid pincode" type="text" id="first-name"
                           placeholder="{{ __('staticwords.PleaseEnterPinCode') }}" name="pin_code"
                           value="{{old('pin_code')}}" class="form-control" /> </div>
                       <br>

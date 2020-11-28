@@ -126,7 +126,7 @@
 								 </div>
 								<hr>
 								@if(Auth::user()->addresses->count()>0)
-								<button name="step2" type="submit" class="btn btn-primary">{{ __('staticwords.DeliverHere') }}</button>
+								<button name="step2" style="margin-top:30px;" type="submit" class="btn btn-primary">{{ __('staticwords.DeliverHere') }}</button>
                 @endif
 								</form>
 

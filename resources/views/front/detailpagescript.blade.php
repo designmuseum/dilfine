@@ -679,13 +679,14 @@ var setdefvariant = null;
                    $('#cartForm').append('<form action="" method="post">{{ csrf_field() }} <button type="submit" class="btn btn-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ADD TO CART <span class="sr-only">(current)</span></button></form>');
                  }
                  else if(stock == 0){
-
                    $('.notifymeblock').html('<button type="button" data-target="#notifyMe" data-toggle="modal" class="m-1 p-2 btn btn-md btn-block btn-primary">NOTIFY ME</button>');
                    $('.notifyForm').attr('action','{{ url("/subscribe/for/product/stock") }}/'+data['id']);
 
                    $('.stockval').text("Out of Stock");
                    $('.quantity-container').remove();
                    $('.quantity-container form').remove();
+				   $('#qbc').hide();
+				   $('.quant-input').addClass('isOOS'); 
                    $('#cartForm').append('<button class="btn btn btn-cart-oos"><i class="fa fa-shopping-cart" aria-hidden="true"></i> OUT OF STOCK <span class="sr-only">(current)</span></button>');
 
                  }else{

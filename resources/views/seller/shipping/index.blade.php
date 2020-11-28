@@ -37,7 +37,7 @@
 										<br><br>
 										<p><i class="fa fa-info-circle"></i> Price Can be changed by admin.</p>
 										@if($shipping->name == 'Local Pickup')
-											<p><i class="fa fa-info-circle"></i> Localpick up will choosen by user at time of order review.</p>
+											<p><i class="fa fa-info-circle"></i> Local pickup will chosen by user at time of order review.</p>
 										@endif
 										@if($shipping->name == 'Flat Rate')
 											<p><i class="fa fa-info-circle"></i> Any item shipped with this method means global shipping charge will apply on all products.</p>
@@ -82,14 +82,14 @@
 	      </div>
 	      <div class="modal-body">
 	        <h5>
-	        	<i class="fa fa-info-circle"></i> Shipping Price is available in two methods and from given weight to given weight <b>eg. 0 kg to 10kg given price is applied</b>.
+	        	<i class="fa fa-info-circle"></i> Shipping Price is available in two methods and from given weight to given weight <b>eg. 0 g to 10g given price is applied</b>.
 	        	<br><br>
 	        	<ul>
 	        		<li>
 	        			Per Order
 	        		</li>
 	        		<li>
-	        			Per Quanity
+	        			Per Quantity
 	        		</li>
 	        	</ul>
 				

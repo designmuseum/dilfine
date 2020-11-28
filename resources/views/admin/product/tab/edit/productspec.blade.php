@@ -86,12 +86,12 @@
 
 	              	  <div class="form-group">
 	              	  	<label>Attribute Key:</label>
-	              	    <input required="" type="text" name="pro_key" value="{{ $spec->prokeys }}" class="form-control">
+	              	    <input required type="text" name="pro_key" value="{{ $spec->prokeys }}" class="form-control">
 	              	  </div>
 
 	              	  <div class="form-group">
 	              	  	<label>Attribute Value:</label>
-	              	  	<input required="" type="text" name="pro_val" value="{{ $spec->provalues }}" class="form-control">
+	              	  	<input required type="text" name="pro_val" value="{{ $spec->provalues }}" class="form-control">
 	              	  </div>
 					
 

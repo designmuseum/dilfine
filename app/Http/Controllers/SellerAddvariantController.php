@@ -66,9 +66,7 @@ class SellerAddvariantController extends Controller
         $input['pro_id'] = $id;
         //Getting All Def
         $all_def = AddSubVariant::where('def', '=', 1)->where('pro_id', '=', $id)->get();
-
         if (isset($request->def)) {
-
             //Updating Current Def
             foreach ($all_def as $value) {
                 $remove_def = AddSubVariant::where('id', '=', $value->id)
@@ -274,7 +272,6 @@ class SellerAddvariantController extends Controller
 
     public function update(Request $request, $id)
     {
-
         $request->validate(['min_order_qty' => 'numeric|min:1'], ['min_order_qty.min' => 'Minimum order quantity must be atleast 1']);
 
         $vars = AddSubVariant::findorfail($id);
@@ -285,13 +282,13 @@ class SellerAddvariantController extends Controller
             ->get();
         $all_def2 = AddSubVariant::where('pro_id', $vars->pro_id)
             ->get();
-
+		
         if ($all_def2->count() < 1) {
             return back()
                 ->with('warning', 'Atleast one value should be set to default !');
 
         }
-
+		
         $varimage = VariantImages::where('var_id', $id)->first();
 
         if (!$varimage) {
@@ -318,7 +315,6 @@ class SellerAddvariantController extends Controller
                 }
             }
         }
-
         if ($file = $request->file('image1')) {
 
             $request->validate([
@@ -558,7 +554,6 @@ class SellerAddvariantController extends Controller
         $addstock = $request->stock;
 
         $newstock = ($current_stock) + ($addstock);
-
         if ($newstock < 0) {
             return back()->with('deleted', 'Stock cannot be less than 0 !');
         }
@@ -607,7 +602,7 @@ class SellerAddvariantController extends Controller
 
                     $vars->update($input);
 
-                    return redirect()->route('add.var', $vars->pro_id)
+                    return redirect()->route('seller.add.var', $vars->pro_id)
                         ->with('updated', 'Variant has been Updated !');
                 } else {
                     return back()
@@ -631,7 +626,7 @@ class SellerAddvariantController extends Controller
 
                             $vars->update($input);
 
-                            return redirect()->route('add.var', $vars->pro_id)
+                            return redirect()->route('seller.add.var', $vars->pro_id)
                                 ->with('updated', 'Linked Variant Updated !');
                         } else {
                             return back()
@@ -657,7 +652,7 @@ class SellerAddvariantController extends Controller
         }
 
         $vars->update($input);
-
+		
         return redirect()->route('seller.add.var', $vars->pro_id)
             ->with('updated', 'Variant Updated !');
 

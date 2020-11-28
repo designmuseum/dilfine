@@ -26,7 +26,7 @@
 	</div>
 	<div class="col-md-12">
 		<p class="help-block">
-				<b>(If this turned on you can manually select related product for this particular product else if its turned off related product will show accodring to product's subcategory.)</b>
+				<b>(If this turned on you can manually select related product for this particular product else if its turned off related product will show according to product's subcategory.)</b>
 		</p>
 	</div>
 	

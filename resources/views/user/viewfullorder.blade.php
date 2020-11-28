@@ -57,10 +57,10 @@ $sellerac = App\Store::where('user_id','=', $user->id)->first();
           @if($genral->vendor_enable==1)
           @if(empty($sellerac) && Auth::user()->role_id != "a")
          
-          <a class="nav-link padding15 {{ Nav::isRoute('applyforseller') }}" href="{{ route('applyforseller') }}"><i class="fa fa-address-card-o" aria-hidden="true"></i> {{ __('staticwords.ApplyforSellerAccount') }}</a>
+          <a class="nav-link padding15 {{ Nav::isRoute('applyforseller') }}" href="{{ route('applyforseller') }}"><i class="fa fa-address-card" aria-hidden="true"></i> {{ __('staticwords.ApplyforSellerAccount') }}</a>
           
           @elseif(Auth::user()->role_id != "a")
-           <a class="nav-link padding15{{ Nav::isRoute('seller.dboard') }}" href="{{ route('seller.dboard') }}"><i class="fa fa-address-card-o" aria-hidden="true"></i> {{ __('staticwords.SellerDashboard') }}</a>
+           <a class="nav-link padding15{{ Nav::isRoute('seller.dboard') }}" href="{{ route('seller.dboard') }}"><i class="fa fa-address-card" aria-hidden="true"></i> {{ __('staticwords.SellerDashboard') }}</a>
           
           @endif
           @endif

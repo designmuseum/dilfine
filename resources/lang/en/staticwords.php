@@ -141,7 +141,7 @@ return [
 	'ManageAccount' => 'Manage Account',
 	'AddNew' => 'Add New',
 	'ADD' => 'ADD',
-	'addressnot' => 'You haven`t created any address Create Now !',
+	'addressnot' => "You haven't created any address, Create Now !",
 	'ADDNewbank' => 'ADD new bank',
 	'SellerDashboard' => 'Seller Dashboard',
 	'OrderHistory' => 'Order History',

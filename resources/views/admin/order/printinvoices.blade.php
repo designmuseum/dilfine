@@ -75,9 +75,16 @@
 								<br>
 									@php
 										
-										$c = App\Allcountry::where('id',$store->country_id)->first()->nicename;
-					                    $s = App\Allstate::where('id',$store->state_id)->first()->name;
-					                    $ci = App\Allcity::where('id',$store->city_id)->first()->name;
+									$c = App\Allcountry::where('id',$user->country_id)->first()->nicename;
+							        $c .=",";
+				                    $s = App\Allstate::where('id',$user->state_id)->first();
+							        if(empty($s)){
+							        $s = "";
+							        }else{
+							        $s = $s->name.",";
+							        }
+				                    $ci = App\Allcity::where('id',$user->city_id)->first();
+							        $ci = !empty($ci)?$ci->name:"";
 		                 
 									@endphp
 								

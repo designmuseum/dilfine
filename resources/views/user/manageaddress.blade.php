@@ -4,7 +4,12 @@
           @endphp
           @section('title',__('staticwords.ManageAddress').' | ')
 @section("body")
-
+<style>
+	.bg-white2-one .btn.btn-md.btn-primary, .bg-white2-one .btn.btn-info{
+		padding: 0rem 1.75rem!important;
+		margin-bottom: 0px!important;
+	}
+</style>
 <div class="container-fluid">
 
     <div class="row">
@@ -54,10 +59,10 @@
           @if($genral->vendor_enable==1)
           @if(empty($sellerac) && Auth::user()->role_id != "a")
          
-          <a class="nav-link padding15 {{ Nav::isRoute('applyforseller') }}" href="{{ route('applyforseller') }}"><i class="fa fa-address-card-o" aria-hidden="true"></i> {{ __('staticwords.ApplyforSellerAccount') }}</a>
+          <a class="nav-link padding15 {{ Nav::isRoute('applyforseller') }}" href="{{ route('applyforseller') }}"><i class="fa fa-address-card" aria-hidden="true"></i> {{ __('staticwords.ApplyforSellerAccount') }}</a>
           
           @elseif(Auth::user()->role_id != "a")
-           <a class="nav-link padding15{{ Nav::isRoute('seller.dboard') }}" href="{{ route('seller.dboard') }}"><i class="fa fa-address-card-o" aria-hidden="true"></i> {{ __('staticwords.SellerDashboard') }}</a>
+           <a class="nav-link padding15{{ Nav::isRoute('seller.dboard') }}" href="{{ route('seller.dboard') }}"><i class="fa fa-address-card" aria-hidden="true"></i> {{ __('staticwords.SellerDashboard') }}</a>
           
           @endif
           @endif
@@ -130,11 +135,11 @@
           @if($genral->vendor_enable==1)
           @if(empty($sellerac) && Auth::user()->role_id != "a")
          
-          <li><a href="{{ route('applyforseller') }}"><i class="fa fa-address-card-o" aria-hidden="true"></i>
+          <li><a href="{{ route('applyforseller') }}"><i class="fa fa-address-card" aria-hidden="true"></i>
             {{ __('staticwords.ApplyforSellerAccount') }}</a>
           </li>
           @elseif(Auth::user()->role_id != "a")
-           <li><a href="{{ route('seller.dboard') }}"><i class="fa fa-address-card-o" aria-hidden="true"></i>
+           <li><a href="{{ route('seller.dboard') }}"><i class="fa fa-address-card" aria-hidden="true"></i>
            {{ __('staticwords.SellerDashboard') }}</a>
           </li>
           @endif
@@ -173,15 +178,15 @@
          <div class="col-xl-9 col-lg-12 col-sm-12">
 
             <div class="bg-white2 bg-white2-one">
-              <div class="text-right">
-                <button data-toggle="modal" data-target="#mngaddress" title="{{ __('staticwords.AddNew') }}" class="btn btn-md btn-primary">+ {{ __('staticwords.AddNew') }}</button>
+              <div class="text-right" >
+                <button style="padding:0.8rem 1.75rem!important" data-toggle="modal" data-target="#mngaddress" title="{{ __('staticwords.AddNew') }}" class="btn btn-md btn-primary">+ {{ __('staticwords.AddNew') }}</button>
               </div>
               <h5 class="user_m2 ">{{ __('staticwords.ManageAddress') }}</h5>
 
               <hr>
               @if(count($user->addresses)>0)
 
-                <div class="row">
+                <div class="row" style="margin-top: 10px;">
                   
 
                   @foreach($user->addresses as $address)
@@ -271,7 +276,7 @@
 
                 <div class="form-group">
                    <label class="font-weight-bold" class="font-weight-normal">{{ __('staticwords.Country') }} <small class="required">*</small></label>
-                <select required="" onchange="getstate('{{ $address->id }}')" name="country_id" class="form-control" id="edit_country_id{{ $address->id }}">
+                <select required onchange="getstate('{{ $address->id }}')" name="country_id" class="form-control" id="edit_country_id{{ $address->id }}">
                       <option>{{ __('staticwords.PleaseChooseCountry') }}</option>
                        @foreach($country as $c)
                         <?php
@@ -290,7 +295,7 @@
 
             <div class="col-md-6">
               <label class="font-weight-bold" class="font-weight-normal">{{ __('staticwords.State') }} <small class="required"></small></label>
-              <select required="" onchange="getcity('{{ $address->id }}')" name="state_id" class="form-control" id="upload_id{{ $address->id }}" >
+              <select required onchange="getcity('{{ $address->id }}')" name="state_id" class="form-control" id="upload_id{{ $address->id }}" >
 
                 @php
                   $findcon = App\Allcountry::find($address->country_id);

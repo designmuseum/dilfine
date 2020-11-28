@@ -84,15 +84,19 @@ $('#attr_name').on('change', function () {
       $('#sel_box').html('');
       $('#sel_box').append('<label><input onclick="checkall()" type="checkbox" id="sel_all"/> Select All</label><br>');
       $('#sel_all').prop('checked', false);
+		if (data.length > 0) {
+			up.append('<label>No options available</label> ');
+			return false;
+		}
       $.each(data, function (i) {
         if (data[i].unit_value != null && data[i].values.toUpperCase() != data[i].unit_value.toUpperCase()) {
           if (getoptiontext == "Color" || getoptiontext == "Colour") {
-            up.append($('<label> <input class="margin-left-8" type="checkbox" name="attr_value[]" value="' + data[i].id + '"><div class="inline-flex margin-left-minus-15"><div class="color-options"><ul><li title="' + data[i].values + '" class="color varcolor active"><a href="#" title=""><i style="color: ' + data[i].unit_value + '" class="fa fa-circle"></i></a><div class="overlay-image overlay-deactive"></div></li></ul></div></div><span class="tx-color">' + data[i].values + '</span></label>'));
+            up.append($('<label><input class="margin-left-8" type="checkbox" name="attr_value[]" value="' + data[i].id + '"><div class="inline-flex margin-left-minus-15"><div class="color-options"><ul><li title="' + data[i].values + '" class="color varcolor active"><a href="#" title=""><i style="color: ' + data[i].unit_value + '" class="fa fa-circle"></i></a><div class="overlay-image overlay-deactive"></div></li></ul></div></div><span class="tx-color">' + data[i].values + '</span> </label>'));
           } else {
-            up.append($('<input class="margin-left-8" type="checkbox" name="attr_value[]" value="' + data[i].id + '">&nbsp' + data[i].values + data[i].unit_value + '</label>'));
+            up.append($('<input class="margin-left-8" type="checkbox" name="attr_value[]" value="' + data[i].id + '">&nbsp' + data[i].values + data[i].unit_value + ' </label>'));
           }
         } else {
-          up.append($('<label> <input class="margin-left-8" type="checkbox" name="attr_value[]" value="' + data[i].id + '">&nbsp' + data[i].values + '</label>'));
+          up.append($('<label> <input class="margin-left-8" type="checkbox" name="attr_value[]" value="' + data[i].id + '">&nbsp' + data[i].values + ' </label>'));
         }
       });
     }

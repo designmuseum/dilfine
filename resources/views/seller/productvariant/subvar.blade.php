@@ -270,7 +270,7 @@
 
         <div class="col-md-2">
           <div class="panel panel-primary bg-primary product-var-class">
-            <label class="box-shadow-two">Image 3</label>
+            <label class="padding-one">Image 3</label>
 
             <div align="center" class="panel-body padding-0">
               
@@ -294,12 +294,12 @@
 
         <div class="col-md-2">
 
-          <div class="box-shadow-two panel panel-primary bg-primary">
+          <div class="product-var-class panel panel-primary bg-primary">
             <label class="padding-one">Image 4</label>
 
             <div align="center" class="padding-0 panel-body">
               
-              <img class="margin-top-5 margin-bottom-10" id="preview4" align="center" width="150" height="150" src="{{ url('images/imagechoosebg.png') }}" alt="">
+              <img class="test-4 margin-bottom-10" id="preview4" align="center" width="150" height="150" src="{{ url('images/imagechoosebg.png') }}" alt="">
               
                
             </div>
@@ -348,9 +348,9 @@
           <div class="product-var-class panel panel-primary bg-primary">
              <label class="padding-one">Image 6</label>
 
-            <div align="center" class="padding-one panel-body">
+            <div align="center" class="padding-0 panel-body">
               
-              <img class="test6 margin-bottom-10px" id="preview6" align="center" width="150" height="150" src="{{ url('images/imagechoosebg.png') }}" alt="">
+              <img class="test6 margin-bottom-10" id="preview6" align="center" width="150" height="150" src="{{ url('images/imagechoosebg.png') }}" alt="">
               
                
             </div>

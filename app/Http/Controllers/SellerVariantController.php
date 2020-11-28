@@ -233,15 +233,9 @@ class SellerVariantController extends Controller
 
     public function getProductValues(Request $request)
     {
-
-        
         $getval = $request->sendval;
-
         $response = ProductValues::select('id', 'values', 'unit_value')->where('atrr_id', '=', $getval)->get();
-
-        return response()
-            ->json($response);
-
+        return response()->json($response);
     }
 
     public function destroy($id)

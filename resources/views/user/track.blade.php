@@ -69,13 +69,13 @@
                             @if(empty($sellerac) && Auth::user()->role_id != "a")
 
                                 <a class="nav-link padding15 {{ Nav::isRoute('applyforseller') }}"
-                                   href="{{ route('applyforseller') }}"><i class="fa fa-address-card-o"
+                                   href="{{ route('applyforseller') }}"><i class="fa fa-address-card"
                                                                            aria-hidden="true"></i> {{ __('staticwords.ApplyforSellerAccount') }}
                                 </a>
 
                             @elseif(Auth::user()->role_id != "a")
                                 <a class="nav-link padding15 {{ Nav::isRoute('seller.dboard') }}"
-                                   href="{{ route('seller.dboard') }}"><i class="fa fa-address-card-o"
+                                   href="{{ route('seller.dboard') }}"><i class="fa fa-address-card"
                                                                           aria-hidden="true"></i> {{ __('staticwords.SellerDashboard') }}
                                 </a>
 
@@ -163,12 +163,12 @@
                                             @if(empty($sellerac) && Auth::user()->role_id != "a")
 
                                                 <li><a href="{{ route('applyforseller') }}"><i
-                                                                class="fa fa-address-card-o" aria-hidden="true"></i>
+                                                                class="fa fa-address-card" aria-hidden="true"></i>
                                                         {{ __('staticwords.ApplyforSellerAccount') }}</a>
                                                 </li>
                                             @elseif(Auth::user()->role_id != "a")
                                                 <li><a href="{{ route('seller.dboard') }}"><i
-                                                                class="fa fa-address-card-o" aria-hidden="true"></i>
+                                                                class="fa fa-address-card" aria-hidden="true"></i>
                                                         {{ __('staticwords.SellerDashboard') }}</a>
                                                 </li>
                                             @endif

@@ -112,7 +112,6 @@ class RegisterController extends Controller
             'password' => Hash::make($request['password']),
             'is_verified' => 1,
         ]);
-
         if (Session::has('cart')) {
 
             foreach (Session::get('cart') as $key => $c) {

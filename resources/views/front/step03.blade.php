@@ -124,7 +124,7 @@
 								 </div>
 								<hr>
 								@if(Auth::user()->addresses->count()>0)
-                <button name="step2" type="submit" class="btn btn-primary">
+                <button style="margin-top:30px;" name="step2" type="submit" class="btn btn-primary">
                   {{ __('staticwords.DeliverHere') }}
                 </button>
                 @endif
@@ -181,7 +181,7 @@
                                               @endphp
                                   <div class="margin-top8 col-md-6 address-modal" style="height: 100%">
                                     <div class="custom-control custom-radio">
-                                      <input value="{{ $address->id }}" type="radio" class="custom-control-input" name="seladd{{ $address->id }}" id="seladd{{ $address->id }}">
+                                      <input value="{{ $address->id }}" type="radio" class="custom-control-input" name="seladd2" id="seladd{{ $address->id }}">
                                       <label class="radiofrommodal{{ $address->id }} custom-control-label" for="seladd{{ $address->id }}"><span class="font-size16">{{ $address->name }}, {{ $address->phone}}</span>
                                           
                                         @if($address->defaddress == 1)
@@ -251,7 +251,7 @@
               <div class="form-group">
                 
                 <label class="font-weight-bold" for="exampleInputEmail1">{{ __('staticwords.Address') }} <span class="required">*</span></label>
-                <input required="" type="text" class="form-control unicase-form-control text-input" id="billing_address" name="billing_address" value="" placeholder="{{ __('542 W. 15th Street') }}">
+                <textarea required="" type="text" class="form-control unicase-form-control text-input" id="billing_address" name="billing_address" value="" placeholder="{{ __('542 W. 15th Street') }}"></textarea>
                
               </div>
 

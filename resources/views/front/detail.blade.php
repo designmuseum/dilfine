@@ -7,6 +7,15 @@
   @endphp
 @endsection
 @section("body")
+<style>
+	.share-content li{
+		list-style: none;
+		margin: auto;
+	}
+	.share-content li a span{
+		font-size: 3rem;
+	}
+</style>
 <nav class="navbar navbar-light display-none navbarBlue stickCartNav fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->

@@ -8,7 +8,13 @@
 
   <!-- jQuery 3.5.4 -->
   <script src="{{url('js/jquery.min.js')}}"></script>
-
+	<style>.swal-content{
+		    padding: 10px 20px!important;
+		}
+		.address{
+			height: 100%!important;
+		}
+	</style>
   {{-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script> --}}
   {{-- <script>
@@ -218,7 +224,7 @@
                     <li class="notiheadergrey header">
                       @if(auth()->user()->unreadnotifications->where('n_type','!=','order_v')->count())
                       {{ __('staticwords.Youhave') }}
-                      <b>{{ auth()->user()->unreadnotifications->where('n_type','!=','order_v')->count() }}</b>
+                      <b style="color:#c26af5 !important">{{ auth()->user()->unreadnotifications->where('n_type','!=','order_v')->count() }}</b>
                       {{ __('staticwords.notification') }} !
                       <a class="color111 float-right"
                         href="{{ route('clearall') }}">{{ __('staticwords.MarkallasRead') }}</a>
@@ -1196,7 +1202,7 @@
                     @if(count($cart_table)>0)
                     <form action="{{ route('empty.cart') }}" method="POST" class="cart-checkout cn-two">
                       @csrf
-                      <button type="submit" class="btn btn-upper btn-primary btn-block m-t-20">
+                      <button type="submit" class="btn btn-upper btn-primary btn-block m-t-20 col-md-6 float-right">
                         {{ __('staticwords.EmptyCart') }}
                       </button>
                     </form>

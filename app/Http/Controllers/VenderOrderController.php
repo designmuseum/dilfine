@@ -55,37 +55,31 @@ class VenderOrderController extends Controller
 
     public function viewOrder($id)
     {	
-
-    	 $order = Order::where('order_id',$id)->where('status','=','1')->first();
-
+      $order = Order::where('order_id',$id)->where('status','=','1')->first();
+	
       if(!isset($order)){
         notify()->error('Order not found !');
         return redirect('/');
       }
-      
       $query = InvoiceDownload::query();
-
       $x = $query->where('order_id','=',$order->id)->where('vender_id',Auth::user()->id)->get();
-
       $total = 0;
-
       $hc=0;
-
       foreach ($x as $key => $value) {
           $total = $total+$value->qty*$value->price+$value->tax_amount+$value->shipping+$value->handlingcharge;
           $hc = $hc+$value->handlingcharge;
       }
-
-    	$address = Address::findorfail($order->delivery_address);
+//	  echo "here up";die;	
+      $address = Address::withTrashed()->findorfail($order->delivery_address);
       $actvitylogs = OrderActivityLog::where('order_id',$order->id)->orderBy('id','desc')->get();
-    	$inv_cus = Invoice::first();
-    	return view('seller.order.show',compact('total','x','order','hc','address','inv_cus','actvitylogs'));
+      $inv_cus = Invoice::first();
+      return view('seller.order.show',compact('total','x','order','hc','address','inv_cus','actvitylogs'));
     }
 
     public function printOrder($id){
        $order = Order::findOrFail($id);
        $inv_cus = Invoice::first();
-       $address = Address::findOrFail($order->delivery_address);
+       $address = Address::withTrashed()->findOrFail($order->delivery_address);
        $x = InvoiceDownload::where('order_id','=',$order->id)->where('vender_id',Auth::user()->id)->get();
        $total = 0;
        $hc=0;
@@ -93,13 +87,14 @@ class VenderOrderController extends Controller
             $total = $total+$value->qty*$value->price+$value->tax_amount+$value->shipping+$value->handlingcharge;
             $hc = $hc+$value->handlingcharge;
         }
+//		print_r($address);die;
        return view('seller.order.printorder',compact('total','address','hc','inv_cus','order'));
     }
 
     public function printInvoice($orderID, $id){
         $getInvoice = InvoiceDownload::where('id',$id)->first();
         $inv_cus = Invoice::first();
-        $address = Address::findOrFail($getInvoice->order->delivery_address);        
+        $address = Address::withTrashed()->findOrFail($getInvoice->order->delivery_address);        
         $invSetting = Invoice::where('user_id',$getInvoice->vender_id)->first();
 
         return view('seller.order.printinvoice',compact('invSetting','address','getInvoice','inv_cus'));
@@ -108,18 +103,15 @@ class VenderOrderController extends Controller
     public function editOrder($orderid){
       $order = Order::where('order_id',$orderid)->first();
       $inv_cus = Invoice::first();
-      $address = Address::findOrFail($order->delivery_address);
+      $address = Address::withTrashed()->findOrFail($order->delivery_address);
       $actvitylogs = OrderActivityLog::where('order_id',$order->id)->orderBy('id','desc')->get();
       $x = InvoiceDownload::where('order_id','=',$order->id)->where('vender_id',Auth::user()->id)->get();
       $total = 0;
       $hc = 0;
-
       foreach ($x as $key => $value) {
           $total = $total+$value->qty*$value->price+$value->tax_amount+$value->shipping+$value->handlingcharge;
           $hc = $hc+$value->handlingcharge;
-      }
-
-
+      }	
       return view('seller.order.edit',compact('x','total','order','address','hc','inv_cus','actvitylogs'));
     }
 

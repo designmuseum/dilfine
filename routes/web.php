@@ -695,6 +695,7 @@ Route::group(['middleware' => ['web']], function () {
                     Route::get('print/{orderid}/invoice/{id}', 'VenderOrderController@printInvoice')->name('seller.print.invoice');
 
                     Route::get('order/{orderid}/edit', 'VenderOrderController@editOrder')->name('seller.order.edit');
+                    Route::get('order/edit/{orderid}', 'VenderOrderController@editOrder')->name('seller.order.edit');
 
                 });
 

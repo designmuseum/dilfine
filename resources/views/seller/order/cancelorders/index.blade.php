@@ -36,7 +36,7 @@
 						<thead>
 
 							<th>
-								#
+								Sr. No.
 							</th>
 
 							<th>

@@ -44,8 +44,15 @@
 
 			                    if($user->country_id !=''){
 									$c = App\Allcountry::where('id',$user->country_id)->first()->nicename;
-				                    $s = App\Allstate::where('id',$user->state_id)->first()->name;
-				                    $ci = App\Allcity::where('id',$user->city_id)->first()->name;
+							        $c .=",";
+				                    $s = App\Allstate::where('id',$user->state_id)->first();
+							        if(empty($s)){
+							        $s = "";
+							        }else{
+							        $s = $s->name.",";
+							        }
+				                    $ci = App\Allcity::where('id',$user->city_id)->first();
+							        $ci = !empty($ci)?$ci->name:"";
 								}
                  
 							@endphp
@@ -54,7 +61,7 @@
 							<p>{{ $user->email }}</p>
 							<p>{{$user->mobile}}</p>
 							@if(isset($c))
-								<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{$ci}}, {{ $s }}, {{ $c }}</p>
+								<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{$ci}} {{ $s }} {{ $c }}</p>
 							@endif
 
 						</td>
@@ -63,7 +70,6 @@
 							<p class="font-weight">{{ strip_tags($address->address) }},</p>
 							@php
 								$user = App\User::findorfail($order->user_id);
-
 			                    $c = App\Allcountry::where('id',$address->country_id)->first()->nicename;
 			                    $s = App\Allstate::where('id',$address->state_id)->first()->name;
 			                    $ci = App\Allcity::where('id',$address->city_id)->first()->name;

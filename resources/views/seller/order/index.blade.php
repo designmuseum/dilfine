@@ -17,23 +17,24 @@
         <table id="full_detail_table" class="table table-bordered table-striped">
          <thead>
             <tr>
-              <th>#</th>
+              <th>SR no.</th>
               <th>Order Type</th>
               <th>Order ID</th>
               <th>Total Qty</th>
               <th>Total Amount</th>
-              <th>#</th>
+              <th>Print</th>
             </tr>
           </thead>
 
           <tbody>
-          
-
+            @php
+			  $count = 0;
+			@endphp
             @foreach($emptyOrder as $key=> $o)
-
+			 
              @php
+			  $count++;
               $x = App\InvoiceDownload::where('order_id','=',$o->id)->where('vender_id',Auth::user()->id)->get();
-
               $total = 0;
 
               foreach ($x as $key => $value) {
@@ -41,7 +42,7 @@
               }
              @endphp
               <tr>
-                <td>{{ $key+1 }}</td>
+                <td>{{ $count }}</td>
                 <td>
                     @if($o->payment_method !='COD')
                       <label class="label label-success">PREPAID</label>

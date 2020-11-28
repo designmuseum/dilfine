@@ -13,7 +13,7 @@
                     <th>Category</th>
                     <th>Rate</th>
                     <th>Amount Type</th>
-                    <th>Commision Type</th>
+                    <th>Commission Type</th>
 
                   </tr>
                 </thead>
