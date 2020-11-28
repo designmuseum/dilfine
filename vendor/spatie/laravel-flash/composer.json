@@ -1,0 +1,45 @@
+{
+    "name": "spatie/laravel-flash",
+    "description": "A lightweight package to flash messages",
+    "keywords": [
+        "spatie",
+        "laravel-flash"
+    ],
+    "homepage": "https://github.com/spatie/laravel-flash",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Freek Van der Herten",
+            "email": "freek@spatie.be",
+            "homepage": "https://spatie.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/session": "^5.5|^5.6|^5.7|^5.8|^6.0|^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.5|^3.6|^3.7|^3.8|^4.0|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spatie\\Flash\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spatie\\Flash\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

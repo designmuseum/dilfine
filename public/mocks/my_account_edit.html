@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Dilfine - Account</title>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+
+<body>
+    <!-- push menu-->
+    <div class="pushmenu menu-home5">
+        <div class="menu-push">
+            <span class="close-left js-close"><i class="icon-close f-20"></i></span>
+            <div class="clearfix"></div>
+            <form role="search" method="get" id="searchform" class="searchform" action="/search">
+                <div>
+                    <label class="screen-reader-text" for="q"></label>
+                    <input type="text" placeholder="Search for products" value="" name="q" id="q" autocomplete="off">
+                    <input type="hidden" name="type" value="product">
+                    <button type="submit" id="searchsubmit"><i class="ion-ios-search-strong"></i></button>
+                </div>
+            </form>
+            <ul class="nav-home5 js-menubar">
+                <li class="level1"><a href="#">Home</a>
+                </li>
+                <li class="level1 active dropdown"><a href="#">Shop</a>
+                    <span class="icon-sub-menu"></span>
+                    <div class="menu-level1 js-open-menu">
+                        <ul class="level1">
+                            <li class="level2">
+                                <a href="#">Categories</a>
+                                <ul class="menu-level-2">
+                                    <li class="level3"><a href="#" title="">Categories</a></li>
+                                    <li class="level3"><a href="#" title="">Categories</a></li>
+                                    <li class="level3"><a href="#" title="">Categories</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- end push menu-->
+    <div class="wrappage">
+        <header id="header" class="header-v5">
+            <div class="topbar">
+                <div class="container container-240">
+                    <div class="row flex">
+                        <div class="col-md-6 col-sm-6 col-xs-4 flex-left">
+                            <div class="topbar-left">
+                                <div class="element hidden-xs hidden-sm">
+                                    <a href="#"><img src="img/icon-track.png" alt=""><span>Track Your Order</span></a>
+                                </div>
+                                <div class="element element-account hidden-md hidden-lg">
+                                    <a href="#">My Account</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-8 flex-right">
+                            <div class="topbar-right">
+                                <div class="element hidden-xs hidden-sm">
+                                    <a href="#">Help</a>
+                                </div>
+                                <div class="element hidden-xs hidden-sm">
+                                    <a href="#"><img src="img/icon-phone.png" alt=""><span>Save big on our app!</span></a>
+                                </div>
+                                <div class="element hidden-xs hidden-sm">
+                                    <a href="#">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="header-center">
+                <div class="container container-240">
+                   <div class="row flex">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 v-center header-logo">
+                           
+                               <a href="#"><img src="img/logo.png" alt="" class="img-reponsive"></a>
+                           
+                        </div>
+                       <div class="col-lg-7 col-md-7 v-center header-search hidden-xs hidden-sm">
+                            <form method="get" class="searchform ajax-search" action="/search" role="search">
+                                <input type="hidden" name="type" value="product">
+                                <input type="text" onblur="if (this.value=='') this.value = this.defaultValue" onfocus="if (this.value==this.defaultValue) this.value = ''" name="q" class="form-control" placeholder="i’m shoping for...">
+                                <ul class="list-product-search hidden-xs hidden-sm">
+                                    <li>
+                                        <a class="flex align-center" href="">
+                                            <div class="product-img">
+                                                <img src="img/placeholders/product.jpeg" alt="">
+                                            </div>
+                                            <h3 class="product-title">Notebook Black Spire Smartphone Black 2.0</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="flex align-center" href="">
+                                            <div class="product-img">
+                                                <img src="img/placeholders/product.jpeg" alt="">
+                                            </div>
+                                            <h3 class="product-title">Smartphone 6S 64GB LTE</h3>
+                                        </a>
+                                    <li>
+                                        <a class="flex align-center" href="">
+                                            <div class="product-img">
+                                                <img src="img/placeholders/product.jpeg" alt="">
+                                            </div>
+                                            <h3 class="product-title">Notebook Black Spire Smartphone Black 2.0</h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="flex align-center" href="">
+                                            <div class="product-img">
+                                                <img src="img/placeholders/product.jpeg" alt="">
+                                            </div>
+                                            <h3 class="product-title">Smartphone 6S 64GB LTE </h3>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="flex align-center" href="">
+                                            <div class="product-img">
+                                                <img src="img/placeholders/product.jpeg" alt="">
+                                            </div>
+                                            <h3 class="product-title">Notebook Black Spire Smartphone Black 2.0</h3>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="search-panel">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href='#'>All categories <span class="fa fa-caret-down"></span></a>
+                                    <ul id="category" class="dropdown-menu dropdown-category">
+                                        <li><a href="#">TV & Video</a></li>
+                                        <li><a href="#">Home Audio & Theater</a></li>
+                                        <li><a href="#">Camera, Photo & Video</a></li>
+                                        <li><a href="#">Cell Phones & Accessories</a></li>
+                                        <li><a href="#">Headphones</a></li>
+                                        <li><a href="#">Car Electronics</a></li>
+                                        <li><a href="#">Electronics Showcase</a></li>
+                                    </ul>
+                                </div>
+                                <span class="input-group-btn">
+                                          <button class="button_search" type="button"><i class="ion-ios-search-strong"></i></button>
+                                </span>
+                            </form>
+                        </div>
+                       <div class="col-lg-3  col-md-3 col-sm-6 col-xs-6 v-center header-sub">
+                            <div class="right-panel">
+                               <!-- <div class="header-sub-element hidden-xs hidden-sm">
+                                   <div class="sub-left">
+                                       <img src="img/icon-call.png" alt="">
+                                   </div>
+                                   <div class="sub-right">
+                                       <span>Call Us Free</span>
+                                        <div class="phone">(+123) 456 789 </div>
+                                   </div>
+                               </div> -->
+                               <div class="header-sub-element row">
+                                   <a class="hidden-xs hidden-sm" href=""><img src="img/icon-user.png" alt=""></a>
+                                   <a href="#"><img src="img/icon-heart.png" alt=""></a>
+                                   <div class="cart">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="label5">
+                                            <img src="img/icon-cart.png" alt="">
+                                            <span class="count cart-count">0</span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-cart">
+                                            <ul class="mini-products-list">
+                                                <li class="item-cart">
+                                                    <div class="product-img-wrap">
+                                                        <a href="#"><img src="img/cart1.jpg" alt="" class="img-reponsive"></a>
+                                                    </div>
+                                                    <div class="product-details">
+                                                        <div class="inner-left">
+                                                            <div class="product-name"><a href="#">Harman Kardon Onyx Studio </a></div>
+                                                            <div class="product-price">
+                                                                ₹ 60.00 <span>( x2)</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="e-del"><i class="ion-ios-close-empty"></i></a>
+                                                </li>
+                                                <li class="item-cart">
+                                                    <div class="product-img-wrap">
+                                                        <a href="#"><img src="img/cart1.jpg" alt="" class="img-reponsive"></a>
+                                                    </div>
+                                                    <div class="product-details">
+                                                        <div class="inner-left">
+                                                            <div class="product-name"><a href="#">Harman Kardon Onyx Studio </a></div>
+                                                            <div class="product-price">
+                                                                ₹ 60.00 <span>( x2)</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                     <a href="#" class="e-del"><i class="ion-ios-close-empty"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="bottom-cart">
+                                                <div class="cart-price">
+                                                    <span>Subtotal</span>
+                                                    <span class="price-total">₹ 120.00</span>
+                                                </div>
+                                                <div class="button-cart">
+                                                    <a href="#" class="cart-btn btn-viewcart">View Cart</a>
+                                                    <a href="#" class="cart-btn e-checkout btn-gradient">Checkout</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                    <a href="#" class="hidden-md hidden-lg icon-pushmenu js-push-menu">
+                                        <i class="fa fa-bars f-15"></i>
+                                    </a>
+                               </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+           </div>
+           <div class="header-bottom hidden-xs hidden-sm">
+               <div class="container container-240">
+                       <div class="row flex lr2">
+                            <div class="col-lg-3 widget-verticalmenu">
+                                <div class="navbar-vertical">
+                                    <button class="navbar-toggles navbar-drop js-vertical-menu"><span>All Departments</span></button>
+                                </div>
+                                <div class="vertical-wrapper">
+                                    <ul class="vertical-group">
+                                        <li class="vertical-item level1 mega-parent"><a href="#">New Arrivals</a></li>
+                                        <li class="vertical-item level1 mega-parent"><a href="#">Top 100 Best Seller <span class="h-ribbon e-red mg-l10">Hot</span></a></li>
+                                        <li class="vertical-item level1 vertical-drop"><a href="#">TV & Video</a>
+                                            <div class="menu-level-1 dropdown-menu vertical-menu v2 tvbg pd2 style1">
+                                                <ul class="level1">
+                                                    <li class="level2 col-md-5">
+                                                            <a href="#">TVs by Type</a>
+                                                            <ul class="menu-level-2">
+                                                                <li class="level3"><a href="#" title="">4K Ultra HD</a></li>
+                                                                <li class="level3"><a href="#" title="">Smart TVs</a></li>
+                                                                <li class="level3"><a href="#" title="">LED & LCD TVs & amplifiers</a></li>
+                                                                <li class="level3"><a href="#" title="">OLED TVs</a></li>
+                                                                <li class="level3"><a href="#" title="">QLED/Quantum Dot TVs  </a></li>
+                                                            </ul>
+
+                                                            <a href="#">Blu-ray & DVD Players</a>
+                                                            <ul class="menu-level-2">
+                                                                <li class="level3"><a href="#" title="">4K Blu-ray Players</a></li>
+                                                                <li class="level3"><a href="#" title="">Streaming Blu-ray Players</a></li>
+                                                                <li class="level3"><a href="#" title="">3D Blu-ray Players</a></li>
+                                                                <li class="level3"><a href="#" title="">Portable Blu-ray Players</a></li>
+                                                                <li class="level3"><a href="#" title="">DVD Recorders</a></li>
+                                                            </ul>
+                                                    </li>
+                                                    <li class="level2 col-md-7">
+                                                        <a href="# ">Home Audio</a>
+                                                        <ul class="menu-level-2">
+                                                            <li class="level3"><a href="#" title="">Home Theater Systems</a></li>
+                                                            <li class="level3"><a href="#" title="">Soundbars</a></li>
+
+                                                            <li class="level3"><a href="#" title="">Speakers</a></li>
+                                                            <li class="level3"><a href="#" title="">Receivers & Amplifiers</a></li>
+                                                            <li class="level3"><a href="#" title="">Premium Audio</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="vertical-item level1 vertical-drop"><a href="#">Home Audi & Theater</a>
+                                            <div class="menu-level-1 dropdown-menu vertical-menu v2 homebg pd2 style1">
+                                                <ul class="level1">
+                                                    <li class="level2 col-md-4">
+                                                            <a href="#">Home theater</a>
+                                                            <ul class="menu-level-2">
+                                                                <li class="level3"><a href="#" title="">Sound bars</a></li>
+                                                                <li class="level3"><a href="#" title="">Speakers</a></li>
+                                                                <li class="level3"><a href="#" title="">Receivers & amplifiers</a></li>
+                                                                <li class="level3"><a href="#" title="">Equalizers</a></li>
+                                                                <li class="level3"><a href="#" title="">Phono preamps  </a></li>
+                                                            </ul>
+                                                    </li>
+                                                    <li class="level2 col-md-4">
+                                                        <a href="# ">Speakers</a>
+                                                        <ul class="menu-level-2">
+                                                            <li class="level3"><a href="#" title="">Bluetooth speakers</a></li>
+                                                            <li class="level3"><a href="#" title="">Ceiling & in-wall speakers</a></li>
+
+                                                            <li class="level3"><a href="#" title="">Digital music systems</a></li>
+                                                            <li class="level3"><a href="#" title="">Outdoor</a></li>
+                                                            <li class="level3"><a href="#" title="">Satellite speakers</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="level2 col-md-4">
+                                                        <a href="#">Accessories</a>
+                                                        <ul class="menu-level-2">
+                                                            <li class="level3"><a href="#" title="">Receivers & amplifiers</a></li>
+                                                            <li class="level3"><a href="#" title="">Cd & tape players</a></li>
+                                                            <li class="level3"><a href="#" title="">Tuners</a></li>
+                                                            <li class="level3"><a href="#" title="">Curntables</a></li>
+                                                            <li class="level3"><a href="#" title="">Receivers & adapters</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="vertical-item level1 vertical-drop"><a href="#">Camera, Photo & Video</a>
+                                            <div class="menu-level-1 dropdown-menu vertical-menu">
+                                                <ul class="vertical-menu1">
+                                                    <li><a href="#">Car Audio</a></li>
+                                                    <li><a href="#">Radar Detectors</a></li>
+                                                    <li><a href="#">Car Safety & Security</a></li>
+                                                    <li><a href="#">Car Video</a></li>
+                                                    <li><a href="#">Two-Way Radios</a></li>
+                                                    <li><a href="#">CB Radios & Scanners</a></li>
+                                                    <li><a href="#">In-Dash Mounting Kits</a></li>
+                                                    <li><a href="#">Installation Accessories.</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="vertical-item level1 vertical-drop"><a href="#">Cell Phones & Accessories</a>
+                                         <div class="menu-level-1 dropdown-menu vertical-menu v2 phonebg pd2 style1">
+                                                <ul class="level1">
+                                                    <li class="level2 col-md-4">
+                                                            <a href="#">Cell Phones</a>
+                                                            <ul class="menu-level-2">
+                                                                <li class="level3"><a href="#" title="">Samsung Galaxy S8</a></li>
+                                                                <li class="level3"><a href="#" title="">iPhone 7/7 Plus</a></li>
+                                                                <li class="level3"><a href="#" title="">iPhone 6</a></li>
+                                                                <li class="level3"><a href="#" title="">Samsung Galaxy S7</a></li>
+                                                                <li class="level3"><a href="#" title="">Unlocked Phones</a></li>
+                                                            </ul>
+
+                                                            <a href="#">Cases</a>
+                                                            <ul class="menu-level-2">
+                                                                <li class="level3"><a href="#" title="">4Armbands</a></li>
+                                                                <li class="level3"><a href="#" title="">Armbands</a></li>
+                                                                <li class="level3"><a href="#" title="">Cases</a></li>
+                                                                <li class="level3"><a href="#" title="">Flip Cases</a></li>
+                                                                <li class="level3"><a href="#" title="">Holsters & Clips</a></li>
+                                                            </ul>
+                                                    </li>
+                                                    <li class="level2 col-md-8">
+                                                        <a href="# ">Accessories</a>
+                                                        <ul class="menu-level-2">
+                                                            <li class="level3"><a href="#" title="">Batteries</a></li>
+                                                            <li class="level3"><a href="#" title="">Bluetooth Headsets</a></li>
+
+                                                            <li class="level3"><a href="#" title="">Bluetooth Speakers</a></li>
+                                                            <li class="level3"><a href="#" title="">Car Accessories</a></li>
+                                                            <li class="level3"><a href="#" title="">Chargers</a></li>
+                                                        </ul>
+
+                                                        <a href="# ">Connected Devices</a>
+                                                        <ul class="menu-level-2">
+                                                            <li class="level3"><a href="#" title="">Tablets</a></li>
+                                                            <li class="level3"><a href="#" title="">Mobile Hotspots</a></li>
+
+                                                            <li class="level3"><a href="#" title="">Smart Watches</a></li>
+                                                            <li class="level3"><a href="#" title="">Wearable Technology</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="vertical-item level1 vertical-drop"><a href="#">Headphones</a>
+                                        <div class="menu-level-1 dropdown-menu vertical-menu v2 headphonebg pd3 style1">
+                                                <ul class="level1">
+
+                                                    <li class="level2 col-md-6">
+                                                            <a href="#">Headphones</a>
+                                                            <ul class="menu-level-2">
+                                                                <li class="level3"><a href="#" title="">In-Ear & Earbud</a></li>
+                                                                <li class="level3"><a href="#" title="">On-Ear</a></li>
+                                                                <li class="level3"><a href="#" title="">Over-Ear</a></li>
+                                                                <li class="level3"><a href="#" title="">Wireless</a></li>
+                                                                <li class="level3"><a href="#" title="">Sports & Fitness</a></li>
+                                                            </ul>
+
+                                                            
+                                                    </li>
+                                                    <li class="level2 col-md-6">
+                                                        <a href="# ">Speaker System</a>
+                                                        <ul class="menu-level-2">
+                                                            <li class="level3"><a href="#" title="">Complete Systems</a></li>
+                                                            <li class="level3"><a href="#" title="">Sound Bars</a></li>
+
+                                                            <li class="level3"><a href="#" title="">Surround Sound</a></li>
+                                                            <li class="level3"><a href="#" title="">Receivers & Amplifiers</a></li>
+                                                            <li class="level3"><a href="#" title="">Equalizers</a></li>
+                                                        </ul>
+
+                                                        
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="vertical-item level1 vertical-drop"><a href="#">Car Electronics</a>
+                                            <div class="menu-level-1 dropdown-menu vertical-menu">
+                                                <ul class="vertical-menu1">
+                                                    <li><a href="#">Car Audio</a></li>
+                                                    <li><a href="#">Radar Detectors</a></li>
+                                                    <li><a href="#">Car Safety & Security</a></li>
+                                                    <li><a href="#">Car Video</a></li>
+                                                    <li><a href="#">Two-Way Radios</a></li>
+                                                    <li><a href="#">CB Radios & Scanners</a></li>
+                                                    <li><a href="#">In-Dash Mounting Kits</a></li>
+                                                    <li><a href="#">Installation Accessories.</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="vertical-item level1 vertical-drop"><a href="#">Electronics Showcase</a>
+                                            <div class="menu-level-1 dropdown-menu vertical-menu">
+                                                <ul class="vertical-menu1">
+                                                    <li><a href="#">Car Audio</a></li>
+                                                    <li><a href="#">Radar Detectors</a></li>
+                                                    <li><a href="#">Car Safety & Security</a></li>
+                                                    <li><a href="#">Car Video</a></li>
+                                                    <li><a href="#">Two-Way Radios</a></li>
+                                                    <li><a href="#">CB Radios & Scanners</a></li>
+                                                    <li><a href="#">In-Dash Mounting Kits</a></li>
+                                                    <li><a href="#">Installation Accessories.</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="vertical-item level1 vertical-drop mega-parent"><a href="#">All categlories</a>
+                                            <div class="menu-level-1 dropdown-menu vertical-menu v2 pd">
+                                                <div class="row">
+                                                    <div class="col-md-4 text-center cate-item">
+                                                        <a href="#"><img src="img/megamenu/cate1.jpg" alt="" class="img-reponsive"></a>
+                                                        <h3><a href="#">Mirrorless Cameras</a></h3>
+                                                    </div>
+                                                    <div class="col-md-4 text-center cate-item">
+                                                        <a href="#"><img src="img/megamenu/cate2.jpg" alt="" class="img-reponsive"></a>
+                                                        <h3><a href="#">Lenses</a></h3>
+                                                    </div>
+                                                    <div class="col-md-4 text-center cate-item">
+                                                        <a href="#"><img src="img/megamenu/cate3.jpg" alt="" class="img-reponsive"></a>
+                                                        <h3><a href="#">Photography Drones</a></h3>
+                                                    </div>
+                                                    <div class="col-md-4 text-center cate-item">
+                                                        <a href="#"><img src="img/megamenu/cate4.jpg" alt="" class="img-reponsive"></a>
+                                                        <h3><a href="#">Sports & Action Cameras</a></h3>
+                                                    </div>
+                                                    <div class="col-md-4 text-center cate-item">
+                                                        <a href="#"><img src="img/megamenu/cate5.jpg" alt="" class="img-reponsive"></a>
+                                                        <h3><a href="#">Optics</a></h3>
+                                                    </div>
+                                                    <div class="col-md-4 text-center cate-item">
+                                                        <a href="#"><img src="img/megamenu/cate6.jpg" alt="" class="img-reponsive"></a>
+                                                        <h3><a href="#">Accessories</a></h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 widget-left">
+                                <div class="flex lr">
+                                    <nav class="main-menu">
+                                        <div class="collapse navbar-collapse" id="myNavbar">
+                                            <ul class="nav navbar-nav">
+                                                <li class="level1"><a href="#"><img src="img/icon-diamond.png" alt="">Discounts</a></li>
+                                                <li class="level1"><a href="#">Tech Discovery<span class="h-ribbon h-pos e-skyblue">New</span></a></li>
+                                                <li class="level1"><a href="#">Trending Styles</a></li>
+                                                <!-- <li class="level1"><a href="#">Gift Cards <span class="h-ribbon h-pos e-green">sale</span></a></li> -->
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                    <div class="header-bottom-right hidden-xs hidden-sm">
+                                        <img src="img/icon-ship.png" alt="" class="img-reponsive">
+                                        <span>Free Shipping on Orders ₹100</span>
+                                    </div>
+                                </div>
+                           </div>
+                       </div>
+               </div>
+           </div>
+        </header>
+        <!-- /header -->
+        <!--content-->
+        <div class="container container-240">
+            
+            <div class="checkout wishlist">
+                <ul class="breadcrumb v3">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">My Account</li>
+                </ul>
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12 widget-verticalmenu">
+                        <div class="vertical-wrapper" style="position: static;">
+                            <ul class="vertical-group">
+                                <li class="vertical-item level1 mega-parent profileArea">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRA-iA9DiqhEwYA_990WjSUXf3vdXgv8v5mqw&usqp=CAU" alt="" class="profImg">
+                                    <p class="pname">Himanshu Sharma</p>
+                                    <p class="pemail">himanshu@craftnotion.com</p>
+                                    <p class="pphone">+91 8121923092</p>
+                                </li>
+                                <li class="vertical-item level1"><a href="#">Order History</a></li>
+                                <li class="vertical-item level1"><a href="#">Edit Profile</a></li>
+                                <li class="vertical-item level1"><a href="#">Change Password</a></li>
+                                <li class="vertical-item level1"><a href="#">Manage Addresses</a></li>
+                                <li class="vertical-item level1"><a href="./wishlist.html">Wishlist</a></li>
+                                <li class="vertical-item level1"><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 myaccount">
+                        <div class="account-element bd-7 e-left" style="margin: auto;">
+                            <div class="cmt-title text-center abs">
+                                <h1 class="page-title v1">Edit Profile</h1>
+                            </div>
+                            <div class="page-content">
+                                <div class="pimg">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRA-iA9DiqhEwYA_990WjSUXf3vdXgv8v5mqw&usqp=CAU" alt="" class="profImg">
+                                    <button class="btn editBtn"><img src="./img/edit.png" alt=""></button>
+                                </div>
+                                <form class="login-form" method="post" action="#"> 
+                                      <div class="form-group">
+                                            <label>Username <span class="f-red">*</span></label>
+                                            <input type="text" id="author2" placeholder="Enter Username" class="form-control bdr" name="comment[author]" value="Himanshu Sharma">
+                                            <label>Email <span class="f-red">*</span></label>
+                                            <input type="text" id="author2" placeholder="Enter Email" class="form-control bdr" name="comment[author]" value="himanshu@craftnotion.com">
+                                            <label>Phone <span class="f-red">*</span></label>
+                                            <input type="text" id="author2" placeholder="Enter Phone" class="form-control bdr" name="comment[author]" value="+91 8121923092">
+                                      </div>
+                                      <div class="flex lr">
+                                          <button type="submit" class="btn btn-submit btn-gradient">
+                                              Update Profile
+                                            </button>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / end content -->
+        <footer>
+            <div class="f-top">
+                <div class="container container-240">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="footer-block footer-about">
+                                <div class="f-logo">
+                                    <a href="#"><img src="img/logo.png" alt="" class="img-reponsive"></a>
+                                </div>
+                                <ul class="footer-block-content">
+                                    <li class="address">
+                                        <span>Dilfine, Delhi-NCR</span>
+                                    </li>
+                                    <li class="phone">
+                                        <span>(+123) 456 789 - (+123) 666 888</span>
+                                    </li>
+                                    <li class="email">
+                                        <span>Contact@Dilfine.com</span>
+                                    </li>
+                                    <li class="time">
+                                        <span>Mon-Sat 9:00pm - 5:00pm  &nbsp;&nbsp;&nbsp;  Sun : Closed</span>
+                                    </li>
+                                </ul>
+                                <div class="footer-social social">
+                                    <h3 class="footer-block-title">Follow us</h3>
+                                    <a href="#" class="fa fa-twitter"></a>
+                                    <a href="#" class="fa fa-dribbble"></a>
+                                    <a href="#" class="fa fa-behance"></a>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="footer-block">
+                                <h3 class="footer-block-title">Quick menu</h3>
+                                <ul class="footer-block-content">
+                                    <li><a href="#">TV & Video</a></li>
+                                    <li><a href="#">Home Audio & Theater</a></li>
+                                    <li><a href="#">Camera, Photo & Video</a></li>
+                                    <li><a href="#">Cell Phones & Accessories</a></li>
+                                    <li><a href="#">Headphones</a></li>
+                                    <li><a href="#">Video Games</a></li>
+                                    <li><a href="#">Bluetooth & Wireless Speakers</a></li>
+                                    <li><a href="#">Car Electronics</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                            <div class="footer-block">
+                                <h3 class="footer-block-title">Customer Service</h3>
+                                <ul class="footer-block-content">
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Track your Order</a></li>
+                                    <li><a href="#">Returns/Exchange</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Customer Service</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="footer-block">
+                                <div class="footer-block-phone">
+                                    <h3 class="footer-block-title">Hot Line</h3>
+                                    <p class="phone-desc">Call Us toll Free</p>
+                                    <p class="phone-light">(+123) 456 789 or (+123) 666 888</p>
+                                </div>
+                                <div class="footer-block-newsletter">
+                                    <h3 class="footer-block-title">Subscription</h3>
+                                    <p>Register now to get updates on promotions and coupons.</p>
+                                    <form class="form_newsletter" action="#" method="post">
+                                        <input type="email" value="" placeholder="Enter your emaill adress" name="EMAIL" id="mail" class="newsletter-input form-control">
+                                        <button id="subscribe" class="button_mini btn btn-gradient" type="submit">
+                                            Subscribe
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f-bottom">
+                <div class="container container-240">
+                    <div class="row flex lr">
+                        <div class="col-xs-6 f-copyright"><span>© 2020 Dilfine. All rights reserved.</span></div>
+                        <div class="col-xs-6 f-payment hidden-xs">
+                            <a href="#"><img src="img/payment/mastercard.png" alt="" class="img-reponsive"></a>
+                            <a href="#"><img src="img/payment/visa.png" alt="" class="img-reponsive"></a>
+                            <a href="#"><img src="img/payment/american-express.png" alt="" class="img-reponsive"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+        <!-- /footer -->
+    </div>
+    <a href="#" class="btn-gradient scroll_top"><i class="ion-ios-arrow-up"></i></a>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
